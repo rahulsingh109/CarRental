@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Raleway&family=Roboto:wght@300;400;500;700&family=Satisfy&display=swap');
 
 
+
+
+#hideDiv{
+    z-index: 100000 !important;
+    position: fixed;
+    height: 100% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
 *{
     margin: 0px;
     box-sizing: border-box;
@@ -57,6 +70,8 @@ h6 {
 .top-nav {
     background-color: var(--bg-color);
     padding: 5px 0px;
+    z-index: 20000 !important;
+    position: relative;
 }
 
 .top-nav p {
@@ -117,7 +132,7 @@ h6 {
 }
 
 .nav-link:hover{
-background-color: #756359 !important;
+background-color: #162249 !important;
 }
 
 /* BTN  */
@@ -145,11 +160,11 @@ background-color: #756359 !important;
 
 /* SLIDER */
 .slide1{
-    background: linear-gradient(rgba(9,32,50,0.4),rgba(9,32,50,0.4)),url(../images/slide1.jpg);
+    background: linear-gradient(rgba(9,32,50,0.4),rgba(9,32,50,0.4)),url(../images/withfamily.jpg);
 }
 
 .slide2{
-    background: linear-gradient(rgba(9,32,50,0.4),rgba(9,32,50,0.4)),url(https://surielementor.com/entox/wp-content/uploads/2021/12/img-banner-01.jpg);
+    background: linear-gradient(rgba(9,32,50,0.4),rgba(9,32,50,0.4)),url(../images/withfamiya.avif);
 }
 
 .carousel-item{
@@ -335,7 +350,6 @@ margin-bottom: .3rem;
     background-color: white !important;
 }
 
-
 /* CLIENTS */
 .clients div{
     height: 250px;
@@ -413,7 +427,7 @@ margin-bottom: .3rem;
 
 /* REVIEWS */
 #reviews{
-background: linear-gradient(rgba(9,32,50,0.8),rgba(9,32,50,0.8)),url(https://surielementor.com/entox/wp-content/uploads/2021/12/img-banner-01.jpg); 
+background: linear-gradient(rgba(9,32,50,0.8),rgba(9,32,50,0.8)),url(../images/review.jpg); 
 background-attachment: fixed;
 }
 
@@ -502,7 +516,7 @@ footer{
 }
 
 .outstation a{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: black !important;
     font-weight: 500;
@@ -756,9 +770,14 @@ position: relative;
 width: 100%;
 
 }
+
 .footerofabout{
-background-color: #f9f9fa;
-color: white;
+    background-color: whitesmoke;
+    color: white;
+    display: flex !important;
+flex-direction: column;
+align-items: center !important;
+justify-content: center !important;
 }
 .footerofabout p{
 font-size:13px !important;
@@ -769,16 +788,16 @@ font-size:14px;
 color: black;
 }
 .footerofabouta{
-margin-top: 7% !important;
+margin-top: 9% !important;
 padding-bottom: 5% !important;
-
+;
 }
 .footerofabouta  h5{
     padding: 5px;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 .footerofabouta p{
-    margin-top: 2%;
+    margin-top: 5%;
 font-size: 13PX !important;
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
@@ -786,7 +805,6 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 margin-top: 8% !important;
 padding-bottom: 5% !important;
 height: 150px;
-
 width: 100%;
 
 
@@ -851,6 +869,7 @@ flex-direction: column;}
 
 .tourpakagesb h1{
     font-size: 35px;
+    color: orangered !important;
 }
 .tourpakagesba p{
 margin-top: 2%;
@@ -867,6 +886,11 @@ flex-direction: column;
 padding: 13px;
 color: orangered;
 font-size: 14px;
+}
+.jay:hover{
+    color: white !important;
+    transition: 0.2s;
+    background-color: orangered;
 }
 .tourpakagesc{
 height: 400px;
@@ -978,6 +1002,7 @@ margin-top:7% !important;
 padding-bottom:70PX;}
 .tournames{
 color: rgb(255, 86, 8) !important;
+padding: 10PX;
 }
 .thirdparta li{
 font-size:50px !important;
@@ -994,7 +1019,7 @@ color: rgb(255, 255, 255);
 }
 .safari{
 background: url(../images/safari.jpg);   
-height: 100vh;
+height: 100vh !important;
 background-repeat: no-repeat;
 background-size: cover;
 background-position: bottom;
@@ -1062,14 +1087,14 @@ background-position: center
 ; scroll-snap-align: start;
 
 width: 100%;
-height: 500px; 
+height: 100vh; 
 }
 .jeepsa::before{
     content: "";
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 500px;
+  height: 100vh;
 
 width: 100%;
 }
@@ -1078,7 +1103,7 @@ width: 100%;
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 500px;
+  height: 100vh;
 
 width: 100%;
 }
@@ -1087,7 +1112,7 @@ width: 100%;
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 500px;
+  height: 100vh;
 
 width: 100%;
 }
@@ -1112,19 +1137,19 @@ border-radius: 5px;
   transition: 0.2s;
 }
 .camels{
-  background: url(https://images.unsplash.com/photo-1542639492-23184001faed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-  background-repeat: no-repeat;
+    background: url(../images/camels.png);   
+    background-repeat: no-repeat;
   background-size: cover;
 scroll-snap-align: start;
 background-position: bottom;
-height: 500px; 
+height: 100vh;
 width: 100%;
 }
 .horsse{
 background: url(https://images.unsplash.com/photo-1549737525-45c81177eef7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);        background-repeat: no-repeat;
       background-size: cover;
    background-position: center;
-   height: 500px; 
+   height: 100vh;
 
  width: 100%;
 
@@ -1289,6 +1314,7 @@ padding-bottom: 70px;
 .footerlast h2{
 font-size: 18px;
 color: #000000;
+text-align: center;
 }
 .iconofaboutd{
 margin:2%;
@@ -1316,13 +1342,17 @@ background-color: whitesmoke;
 }
 .conatctusimg{
 width: 100%;
-height: 500px;
+height:600px;
+background-color: rgba(255, 255, 255, 0.74);
+display: flex;
+justify-content: center;
 }
 .conatctusimg img{
-height: 100%;
-object-fit: cover;
-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
 }
+
 .aam{
     position: absolute;
     opacity: 0.3
@@ -1340,4 +1370,134 @@ display: none;    }
         height: 300px;
         width: 100%;
         }
+  }
+
+  @media screen and (max-width: 800px) {
+    .footerofabout{
+           text-align: center;
+        }
+  }
+  
+  .tourwalathirdse{
+    background: url(../images/jodhpurhh.png);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tourwalathirdse::before{
+        content: "";
+    position: absolute;
+    background-color:rgb(255, 255, 255) !important;
+  opacity:80%;
+
+  height: 500px;
+
+width: 100%;
+  }
+.tourwalathirdsea h1{
+    font-size: 50px !important;
+    text-align: center !important;
+    padding: 10px;
+}
+.tourwalathirdsea{
+    z-index: 99;
+}
+.tourwalathirdsea p{
+font-size: 15px;
+padding: 13px;
+}
+
+#pppn{
+    position: relative;
+}
+
+@media screen and (max-width: 1400px) {
+    .pppsd{
+height: 500px !;        }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .swiper-wrapper {
+height: 400px !important;        }
+
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px  !important;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    object-fit: cover;
+
+  }
+
+  .swiper-slide {
+    width: 80%;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 60%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 40%;
+  }
+
+  .mySwipera{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 5%;
+
+  }
+.swipersecond{
+    margin-top: 5%;
+}
+  .sliderss {
+    background-position: center;
+    background-size: cover;
+    width: 600px !important;
+    height: 400px !important;
+
+    
+  }
+
+  .swiper-sliderr img{
+
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @media screen and (max-width: 800px) {
+    .sliderss {
+        width: 500px !important;
+        height: 300px !important;
+
+    }
+    
+
+  }
+  @media screen and (max-width: 500px) {
+    .sliderss {
+        width: 400px !important;
+        height: 300px !important;
+
+    }
+
   }
