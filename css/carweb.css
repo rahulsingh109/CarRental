@@ -31,11 +31,24 @@ html{
     scroll-behavior: smooth !important;
 }
 
+body{
+    position: relative;
+}
 
+.call-icon i{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+}
 
 :root{
 
     --bg-color:#303952 !important;
+    --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
 }
 
 h1,
@@ -48,6 +61,19 @@ h6 {
     color: rgb(0, 0, 0) !important;
 }
 
+
+::-webkit-scrollbar{
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #303952;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #f85508;
+  border-radius: 1rem;
+}
 
 
 .bg-cover{
@@ -70,7 +96,65 @@ h6 {
     background-color: #fff;
 }
 
+.fixed-icon{
+    position: fixed;
+    width: 70px;
+    margin-top: 717px;
+    transition: all 0.3s linear;
+    z-index: 1000;
+  }
+  .fixed-icon .fixed-icon-li{
+    height: 60px;
+    position:relative;
+  }
 
+  .fixed-icon .fixed-icon-ul{
+    padding-left: 1rem !important;
+    text-align: center;
+  } 
+  .fixed-icon .fixed-icon-li .fixed-icon-a{
+    color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    padding-left:25%;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+    transition: all .3s linear;
+  }
+  .fixed-icon .fixed-icon-li:nth-child(1) a{
+    background: #43df4b;
+  }
+  .fixed-icon .fixed-icon-li:nth-child(2) a{
+    background: #258f3f;
+  }
+
+  .fixed-icon .fixed-icon-li .fixed-icon-a .fixed-icon-i{
+    position:absolute;
+    top: 17px;
+    left: 20px;
+    font-size: 27px;
+  }
+  .fixed-icon-ul .fixed-icon-li .fixed-icon-a .fixed-icon-span{
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .fixed-icon-a:hover {
+    z-index:1;
+    width: 200px;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
+  }
+  .fixed-icon-ul .fixed-icon-li:hover .fixed-icon-a .fixed-icon-span{
+    padding-left: 30%;
+    display: block;
+  }
+
+  .perkm p{
+    font-size: 2rem;
+  }
 
 /* NAVBAR */
 .top-nav {
@@ -88,12 +172,22 @@ h6 {
 }
 
 .top-nav i,
-.top-nav span {
+.top-nav a span {
     vertical-align: middle;
     font-size: 1.5rem;
+    color: white !important;
 }
 
-.social-links a {
+.top-nav a{
+  text-decoration: none;
+  transition: 0.5s ease all;
+}
+
+.top-nav span:hover .chat-icon{
+transform: rotate(180deg) !important;
+}
+
+/* .social-links a {
     width: 34px;
     height: 34px;
     text-decoration: none;
@@ -110,7 +204,7 @@ h6 {
 .social-links a:hover {
     background-color: #ffffff !important;
     color: var(--bg-color) !important;
-}
+} */
 
 .navbar {
     box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08) !important;
@@ -800,17 +894,10 @@ color: #000;
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .secondsectionofaboutbimg{
-height: 400px;
+height: 300px;
 width: 100%;
 }
-.secondsectionofaboutbimg img{
 
-height: 100%;
-object-fit: cover;
-position: relative;
-width: 100%;
-
-}
 
 .footerofabout{
     background-color: whitesmoke;
@@ -1128,14 +1215,14 @@ background-position: center
 ; scroll-snap-align: start;
 
 width: 100%;
-height: 100vh; 
+height: 500PX; 
 }
 .jeepsa::before{
     content: "";
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 100vh;
+  height: 500PX; 
 
 width: 100%;
 }
@@ -1144,7 +1231,7 @@ width: 100%;
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 100vh;
+  height: 500PX; 
 
 width: 100%;
 }
@@ -1153,7 +1240,7 @@ width: 100%;
     position: absolute;
     background-color:black !important;
   opacity:30%;
-  height: 100vh;
+  height: 500PX; 
 
 width: 100%;
 }
@@ -1182,15 +1269,15 @@ border-radius: 5px;
     background-repeat: no-repeat;
   background-size: cover;
 scroll-snap-align: start;
-background-position: bottom;
-height: 100vh;
+background-position: center;
+height: 500PX; 
 width: 100%;
 }
 .horsse{
 background: url(https://images.unsplash.com/photo-1549737525-45c81177eef7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);        background-repeat: no-repeat;
       background-size: cover;
    background-position: center;
-   height: 100vh;
+   height: 500PX; 
 
  width: 100%;
 
@@ -1243,7 +1330,7 @@ background: url(https://images.unsplash.com/photo-1516651165460-30864737f9d9?ixl
 input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
   border: 1px solid #dbdbdb;
   border-radius: 2px;
-  color: #333;
+  color: #0a0909;
   height: 42px;
   padding: 0 0 0 20px;
   width: 100%;
@@ -1463,7 +1550,13 @@ height: 500px !;        }
 height: 400px !important;        }
 
   }
+  @media screen and (max-width: 900PX) {
+    .tourwala {
+height: 400px !important; 
+background-position: center;}
 
+  }
+  
   .swiper {
     width: 100%;
     height: 100%;
@@ -1669,9 +1762,7 @@ justify-content: center;
     margin-left: 10%;
 
 }
-.footerd ::placeholder{
-    padding-left: 13px;
-}
+
 
 
 .footera,.footerb,.footerc{
@@ -1716,3 +1807,44 @@ margin-left:10%;
     font-family: "Satisfy",sans-serif;
 color: orangered !important;
 }
+
+
+/* WEDDING-CARS */
+.wedding-cars{
+    padding: 120px 0px !important;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/CarRental/images/wedding-cars.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wedding-cars h1{
+    font-size: 7rem;
+    color: #ff4d29 !important;
+    font-family: 'Satisfy',sans-serif;
+    text-shadow:var(--x-offset)
+    var(--y-offset)
+    0px
+    var(--background-color), 
+    
+    calc( var(--x-offset) - var(--stroke) )
+    calc( var(--y-offset) + var(--stroke) )
+    0px
+    var(--stroke-color); 
+}
+
+.wedding-cars p{
+    font-size:4rem;
+    margin-top: 2rem;
+    color: white !important;
+    font-family: 'Satisfy',sans-serif !important;
+    padding: 2rem;
+    border-left: 3px solid #ff4d29;
+    border-radius: 8px;
+}
+
+
+FOOTER input[type="text"]{
+  padding: 0 0 0 20px !important;
+font-size: 13PX;}
