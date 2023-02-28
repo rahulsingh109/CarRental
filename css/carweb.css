@@ -1335,6 +1335,7 @@ input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
   padding: 0 0 0 20px;
   width: 100%;
   outline: 0;
+  font-size: 14PX !important;
 }
 .grid-50-50 {
   display: grid;
@@ -1350,6 +1351,8 @@ textarea {
   color: #333;
   padding: 12px 0 0 20px;
   width: 100%;
+  font-size: 15px !important;
+
   outline: 0;
   margin-bottom: 20px;
 }
@@ -1798,10 +1801,24 @@ margin-left:10%;
     .lastfooter p{
         text-align: center;
         font-size: 15px;
-        color:rgb(255, 124, 107);
-        margin-bottom:2%;
+        color:rgb(0, 0, 0);
  font-weight: 600;
     }
+    .lastfooter a{
+      text-align: center;
+      font-size: 17px;
+      color:rgb(0, 0, 0);
+ 
+font-weight: 600;
+  }
+
+  .lastfooter a:hover{
+    text-align: center;
+    font-size: 17px;
+      color:rgb(255, 30, 0);
+
+font-weight: 600;
+}
 
 .outstaionfirst h3{
     font-family: "Satisfy",sans-serif;
