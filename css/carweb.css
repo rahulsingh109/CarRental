@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Raleway&family=Roboto:wght@300;400;500;700&family=Satisfy&display=swap');
+n@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Raleway&family=Roboto:wght@300;400;500;700&family=Satisfy&display=swap');
 
 
 
@@ -232,7 +232,7 @@ transform: rotate(180deg) !important;
 }
 .nav-link:hover{
 background-color: #162249 !important;
-border-radius:20px;
+border-radius:20px !important;
 }
 
 /* BTN  */
