@@ -16,12 +16,12 @@
   integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
   integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="all.min.css">
+<link rel="stylesheet" href="css/all.min.css">
 <link rel="stylesheet" href="slick-theme.css">
 <link rel="stylesheet" href="slick.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="slick.min.js"></script>
-<link rel="stylesheet" href="fontawesome.min.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="all.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -36,23 +36,31 @@
 </head>
 
 <body>
-  
-  <nav class="top-nav">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-auto">
-          <p>
-            <i class="bx bxs-envelope"></i>
-            <span>nikhil.info@gmail.com</span>
-          </p>
-          <p>
-            <i class="bx bxs-phone-call"></i>
-            <span>(219) 555-0114</span>
-          </p>
+  <nav class="fixed-icon d-sm-none">
+    <ul class="fixed-icon-ul">
+       <li class="fixed-icon-li"><a href="#" class="fixed-icon-a"><i class="fas fa-phone fixed-icon-i"></i></a></li>
+       <li class="fixed-icon-li"><a href="#" class="fixed-icon-a"><i class="fab fa-whatsapp fixed-icon-i"></i></a></li>
+    </ul>
+ </nav>
+    <nav class="top-nav">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            <p>
+              <i class="bx bxs-envelope chat-icon"></i>
+             <a href="" class="email-link"><span>nikhil.info@gmail.com</span></a> 
+             <audio src="images/dropSound.mp3" id="beep" preload="auto">
+             </audio>
+            </p>
+            <p>
+              <i class="bx bxs-phone-call chat-icon"></i>
+              <a href=""><span>+91 9079302952</span></a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+ 
 
   <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container">
